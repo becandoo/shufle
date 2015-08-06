@@ -25,94 +25,30 @@ module.exports = function(grunt) {
 
     config: {
       src: 'src',
-      dist: 'docs'
+      dist: 'shufle'
     },
 
     watch: {
-      assemble: {
-        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
-        tasks: ['assemble']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '<%= config.dist %>/{,*/}*.html',
-          '<%= config.dist %>/assets/{,*/}*.css',
-          '<%= config.dist %>/assets/{,*/}*.js',
-          '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-        ],
-        stylesheets: {
+        stylus: {
           files: 'src/assets/stylus/*.styl',
-          tasks: [ 'stylesheets' ]
-        },
-        scripts: {
-          files: 'src/assets/coffeescript/*.coffee',
-          tasks: [ 'scripts' ]
+          tasks: [ 'stylus' ]
         },
         jade: {
-          files: 'src/**/*.jade',
+          files: 'src/jade/*.jade',
           tasks: [ 'jade' ]
         },
         copy: {
-          files: [ 'src/assets/**', '!src/**/*.styl', '!src/**/*.coffee', '!src/**/*.jade' ],
+          files: [ 'src/stylus/**' ],
           tasks: [ 'copy' ]
         }
-      }
-    },
-
-    connect: {
-      options: {
-        port: 9000,
-        livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          open: true,
-          base: [
-            '<%= config.dist %>'
-          ]
-        }
-      }
-    },
-
-    assemble: {
-      pages: {
-        options: {
-          flatten: true,
-          assets: '<%= config.dist %>/assets',
-          layout: '<%= config.src %>/layouts/default.hbs',
-          data: '<%= config.src %>/data/*.{json,yml}',
-          partials: '<%= config.src %>/partials/*.hbs',
-          plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
-        },
-        files: {
-          '<%= config.dist %>/': ['<%= config.src %>/pages/*.hbs']
-        }
-      }
     },
 
     copy: {
-      css: {
-        expand: true,
-        cwd: 'src/assets/stylesheets',
-        src: '**',
-        dest: '<%= config.dist %>/assets/css/'
-      },
-      js: {
-        expand: true,
-        cwd: 'src/assets/js',
-        src: '**',
-        dest: '<%= config.dist %>/assets/js'
-      },
       stylus: {
         expand: true,
-        cwd: 'src/assets/images',
+        cwd: 'src/stylus',
         src: '**',
-        dest: '<%= config.dist %>/assets/images/'
+        dest: '<%= config.dist %>/'
       }
     },
 
@@ -126,77 +62,44 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: [ '**/*.styl' ],
-          dest: 'src/assets/stylesheets',
+          dest: 'src/stylesheets',
           ext: '.css'
         }]
       }
     },
 
-    autoprefixer: {
-      build: {
-        expand: true,
-        cwd: 'docs',
-        src: [ '**/*.css' ],
-        dest: 'docs'
+    jade: {
+      compile: {
+        options: {
+          data: {}
+        },
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: [ 'jade/*.jade' ],
+          dest: 'src/docs',
+          ext: '.html'
+        }]
       }
     },
-
-    coffee: {
-      build: {
-        expand: true,
-        cwd: 'source',
-        src: [ '**/*.coffee' ],
-        dest: 'build',
-        ext: '.js'
-      }
-    },
-
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml,css,styl}']
 
   });
 
-  grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  // grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-stylus');
 
 
   //define tasks
-  grunt.registerTask(
-    'scripts',
-    'Compiles the JavaScript files.',
-    [ 'coffee' ]
-  );
-
-  grunt.registerTask(
-    'stylesheets',
-    'Compiles the stylesheets.',
-    [ 'stylus', 'autoprefixer' ]
-  );
-
-
-
-  grunt.registerTask('server',
-   [ 'build', 'connect:livereload', 'watch' ]
-  );
-
-
-  grunt.registerTask(
-    'scripts',
-    'Compiles the JavaScript files.',
-    [ 'coffee' ]
-  );
-
 
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'assemble',
-    'stylesheets',
-    'scripts'
+    'stylus'
   ]);
 
   grunt.registerTask('default', [
