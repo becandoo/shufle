@@ -1,0 +1,17 @@
+{
+  "generator-assemble": {
+    "projectName": "shufle",
+    "projectDesc": "a simple, lightweight, mixin library for stylus",
+    "authorLogin": "becandoo",
+    "installPlugin": true,
+    "author": {
+      "name": "Brandon Cranmore",
+      "login": "assemble",
+      "email": "brandoncranmore@gmail.com"
+    },
+    "plugins": [
+      "assemble-contrib-permalinks",
+      "assemble-contrib-sitemap"
+    ]
+  }
+}
