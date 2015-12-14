@@ -1,13 +1,13 @@
 {
   "generator-assemble": {
-    "projectName": "shufle",
-    "projectDesc": "a simple, lightweight, mixin library for stylus",
-    "authorLogin": "becandoo",
+    "projectName": "compass susy",
+    "projectDesc": "The best project ever.",
+    "authorLogin": "assemble",
     "installPlugin": true,
     "author": {
-      "name": "Brandon Cranmore",
+      "name": "bcranmore",
       "login": "assemble",
-      "email": "brandoncranmore@gmail.com"
+      "email": ""
     },
     "plugins": [
       "assemble-contrib-permalinks",

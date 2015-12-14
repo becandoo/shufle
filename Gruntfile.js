@@ -1,5 +1,5 @@
 /*
- * Generated on 2015-08-06
+ * Generated on 2015-12-14
  * generator-assemble v0.5.0
  * https://github.com/assemble/generator-assemble
  *
@@ -25,81 +25,112 @@ module.exports = function(grunt) {
 
     config: {
       src: 'src',
-      dist: 'shufle'
+      dist: 'docs'
     },
 
     watch: {
-        stylus: {
-          files: 'src/assets/stylus/*.styl',
-          tasks: [ 'stylus' ]
+      assemble: {
+        files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+        tasks: ['assemble']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
         },
-        jade: {
-          files: 'src/jade/*.jade',
-          tasks: [ 'jade' ]
-        },
-        copy: {
-          files: [ 'src/stylus/**' ],
-          tasks: [ 'copy' ]
-        }
-    },
-
-    copy: {
-      stylus: {
-        expand: true,
-        cwd: 'src/stylus',
-        src: '**',
-        dest: '<%= config.dist %>/'
+        files: [
+          '<%= config.dist %>/{,*/}*.html',
+          '<%= config.dist %>/assets/{,*/}*.css',
+          '<%= config.dist %>/assets/{,*/}*.js',
+          '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
       }
     },
 
-    stylus: {
-      build: {
+    connect: {
+      options: {
+        port: 9000,
+        livereload: 35729,
+        // change this to '0.0.0.0' to access the server from outside
+        hostname: 'localhost'
+      },
+      livereload: {
         options: {
-          linenos: true,
-          compress: false
+          open: true,
+          base: [
+            '<%= config.dist %>'
+          ]
+        }
+      }
+    },
+
+    assemble: {
+      pages: {
+        options: {
+          flatten: true,
+          assets: '<%= config.dist %>/assets',
+          layout: '<%= config.src %>/templates/layouts/default.hbs',
+          data: '<%= config.src %>/data/*.{json,yml}',
+          partials: '<%= config.src %>/templates/partials/*.hbs',
+          plugins: ['assemble-contrib-permalinks','assemble-contrib-sitemap'],
         },
+        files: {
+          '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+        }
+      }
+    },
+
+    sass: {
+      dist: {
+        options: {
+         style: 'expanded',
+         require: 'susy',
+         compass: true
+       },
         files: [{
           expand: true,
-          cwd: 'src',
-          src: [ '**/*.styl' ],
-          dest: 'src/stylesheets',
+          cwd: 'src/assets/sass/',
+          src: ['*.scss'],
+          dest: 'src/assets/stylesheets',
           ext: '.css'
         }]
       }
     },
 
-    jade: {
-      compile: {
-        options: {
-          data: {}
-        },
-        files: [{
-          expand: true,
-          cwd: 'src',
-          src: [ 'jade/*.jade' ],
-          dest: 'src/docs',
-          ext: '.html'
-        }]
+    copy: {
+      bootstrap: {
+        expand: true,
+        cwd: 'bower_components/bootstrap/dist/',
+        src: '**',
+        dest: '<%= config.dist %>/assets/'
+      },
+      theme: {
+        expand: true,
+        cwd: 'src/assets/',
+        src: '**',
+        dest: '<%= config.dist %>/assets/css/'
       }
     },
+
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml,css,styl}']
+    clean: ['<%= config.dist %>/**/*.{html,xml}']
 
   });
 
-  // grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-stylus');
+  grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
-
-  //define tasks
+  grunt.registerTask('server', [
+    'build',
+    'connect:livereload',
+    'watch'
+  ]);
 
   grunt.registerTask('build', [
     'clean',
+    'sass',
     'copy',
-    'stylus'
+    'assemble'
   ]);
 
   grunt.registerTask('default', [
