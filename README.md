@@ -10,12 +10,14 @@ Shufle is a simple, semantic grid, based on Susy.
 1. Drop the 'grid.css' file into your CSS/Stylesheets folder.
 2. Link it in your site's ```html<head>``` tag.
 3. Utilize the grid in your site, with the following structure:
+
         ```html
         <div Class="grid">
         <div Class="columns-#">
         </div>
         </div>
         ```
+        
 4. For instance, a grid spanning 4 columns would look like this:
 
         ```html
@@ -25,10 +27,7 @@ Shufle is a simple, semantic grid, based on Susy.
           <div class="columns-4"></div>
         </div>
         ```
-
-* Rendered in the browser:
-
-
+* Click here for additional examples.
 
 * Thats it! Super easy, right?
 
