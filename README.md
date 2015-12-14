@@ -1,6 +1,6 @@
-# compass-susy
+# Shufle - A Super Simple Susy Grid
 
-> The best project ever..
+> Why another grid? Not everyone knows SASS and we get it. I didn't know about it until about a year ago, when I crawled out from under a rock.
 
 ## [Shufle](http://becandoo.github.io/shufle)
 
