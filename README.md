@@ -12,15 +12,15 @@ Shufle is a simple, semantic grid, based on Susy.
 * The second thing, is the columns-# class. For instance, let's say you wanted to create a grid, spanning 4 columns in width.
 * This is what this would look like:
 
-<dl>
-* <div class="grid">
-*   <div class="columns-4"></div>
-*   <div class="columns-4"></div>
-*   <div class="columns-4"></div>
-* </div>
-</dl>
+```html
+<div class="grid">
+  <div class="columns-4"></div>
+  <div class="columns-4"></div>
+  <div class="columns-4"></div>
+</div>
+```
 
-* Thats it! Easy peasy.
+* Thats it! Super easy, right?
 
 ## Contributing
 All contributions are welcome! The simplest way to show your support for this project is to **"star" it**. Please see [Contributing to Shufle](http://github.com/shufle/contributing) for more information.
