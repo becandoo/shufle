@@ -6,19 +6,29 @@
 
 Shufle is a simple, semantic grid, based on Susy.
 
-* Documentation
-* Using the grid is simple. Drop it into your project, link your css, and (almost) done.
-* To setup the grid, there are two things to know. The grid starts with a .grid class. This class is the outer container and will contain the columns nested within.
-* The second thing, is the columns-# class. For instance, let's say you wanted to create a grid, spanning 4 columns in width.
-* This is what this would look like:
 
-```html
-<div class="grid">
-  <div class="columns-4"></div>
-  <div class="columns-4"></div>
-  <div class="columns-4"></div>
-</div>
-```
+1. Drop the 'grid.css' file into your CSS/Stylesheets folder.
+2. Link it in your site's ```html<head>``` tag.
+3. Utilize the grid in your site, with the following structure:
+        ```html
+        <div Class="grid">
+        <div Class="columns-#">
+        </div>
+        </div>
+        ```
+4. For instance, a grid spanning 4 columns would look like this:
+
+        ```html
+        <div class="grid">
+          <div class="columns-4"></div>
+          <div class="columns-4"></div>
+          <div class="columns-4"></div>
+        </div>
+        ```
+
+* Rendered in the browser:
+
+
 
 * Thats it! Super easy, right?
 
