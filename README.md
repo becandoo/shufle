@@ -1,14 +1,13 @@
-# [Shufle](http://becandoo.github.io/shufle)
+# Inline-style:
+![Shufle Logo](https://github.com/becandoo/shufle/docs/assets/images/shufle-logo-6.png)[Shufle](http://becandoo.github.io/shufle)
 ## A simple, lightweight grid, built with Neat.
 
 > Why another grid? Not everyone knows SASS and we get it.
 >This is for people who want to harness the power of Bourbon's Neat, without having to know sass/scss.
 
-### Eventually, we will add additional (optional) HTML elements to create an awesome, framework, harnessing the power of Bourbon.
-
 
 1. Drop the 'grid.css' file into your CSS/Stylesheets folder.
-2. Link it in your site's ```html<head>``` tag.
+2. Link it in your site's <head> tag.
 3. Utilize the grid in your site, with the following structure:
 
 ```html
@@ -18,7 +17,7 @@
         </div>
 ```
 
-4. For instance, a grid spanning 4 columns would look like this:
+4. For instance, a grid spanning '4' columns would look like this:
 
 ```html
         <div class="grid">
@@ -27,6 +26,17 @@
           <div class="columns-4"></div>
         </div>
 ```
+
+5. What about offset? We've covered that too:
+
+```html
+        <div class="grid">
+          <div class="shift-2 columns-4"></div>
+          <div class="columns-3"></div>
+          <div class="columns-3"></div>
+        </div>
+```
+
 *See docs/index.html for additional examples.
 
 * Thats it! Super easy, right?
