@@ -1,5 +1,5 @@
-# Inline-style:
-![Shufle Logo](https://github.com/becandoo/shufle/docs/assets/images/shufle-logo-6.png)[Shufle](http://becandoo.github.io/shufle)
+![Shufle Logo](https://dl.dropbox.com/s/gxulcwgovoqdq45/shuffle-logo-6.png?dl=0)
+#[Shufle](http://becandoo.github.io/shufle)
 ## A simple, lightweight grid, built with Neat.
 
 > Why another grid? Not everyone knows SASS and we get it.
