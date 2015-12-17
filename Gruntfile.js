@@ -33,6 +33,14 @@ module.exports = function(grunt) {
         files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
         tasks: ['assemble']
       },
+      scss: {
+        files: 'src/assets/scss/**/*.scss',
+        tasks: [ 'sass' ]
+      },
+      copy: {
+        files: [ 'src/**', '!src/**/*.scss', '!src/**/*.coffee', '!src/**/*.jade' ],
+        tasks: [ 'copy' ]
+      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -79,16 +87,12 @@ module.exports = function(grunt) {
       }
     },
 
+    // sass (libsass) config
     sass: {
-      dist: {
-        options: {
-         style: 'expanded',
-         require: 'susy',
-         compass: true
-       },
+      build: {
         files: [{
           expand: true,
-          cwd: 'src/assets/sass/',
+          cwd: 'src/assets/scss/',
           src: ['*.scss'],
           dest: 'src/assets/stylesheets',
           ext: '.css'
@@ -97,23 +101,29 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      bootstrap: {
+      css: {
         expand: true,
-        cwd: 'bower_components/bootstrap/dist/',
-        src: '**',
-        dest: '<%= config.dist %>/assets/'
-      },
-      theme: {
-        expand: true,
-        cwd: 'src/assets/',
+        cwd: 'src/assets/stylesheets',
         src: '**',
         dest: '<%= config.dist %>/assets/css/'
+      },
+      js: {
+        expand: true,
+        cwd: 'src/assets/js',
+        src: '**',
+        dest: '<%= config.dist %>/assets/js/'
+      },
+      images: {
+        expand: true,
+        cwd: 'src/assets/images',
+        src: '**',
+        dest: '<%= config.dist %>/assets/images/'
       }
     },
 
     // Before generating any new files,
     // remove any previously-created files.
-    clean: ['<%= config.dist %>/**/*.{html,xml}']
+    clean: ['<%= config.dist %>/**/*.{html,xml,css,js,png,jpg,txt,}']
 
   });
 

@@ -1,8 +1,7 @@
-# Shufle - A Super Simple Susy Grid
+# [Shufle](http://becandoo.github.io/shufle) - A Super Simple Susy Grid
 
 > Why another grid? Not everyone knows SASS and we get it. I didn't know about it until about a year ago, when I crawled out from under a rock.
 
-## [Shufle](http://becandoo.github.io/shufle)
 
 Shufle is a simple, semantic grid, based on Susy.
 
@@ -11,22 +10,22 @@ Shufle is a simple, semantic grid, based on Susy.
 2. Link it in your site's ```html<head>``` tag.
 3. Utilize the grid in your site, with the following structure:
 
-
+```html
         <div Class="grid">
           <div Class="columns-#">
           </div>
         </div>
-
+```
 
 4. For instance, a grid spanning 4 columns would look like this:
 
-
+```html
         <div class="grid">
           <div class="columns-4"></div>
           <div class="columns-4"></div>
           <div class="columns-4"></div>
         </div>
-
+```
 *See docs/index.html for additional examples.
 
 * Thats it! Super easy, right?
