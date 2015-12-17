@@ -1,0 +1,645 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,900,900italic,500italic,500,400italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+@media screen and (min-width: 800px) {
+  .grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .grid .columns-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+  }
+  .grid .columns-1:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  .grid .columns-2:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  .grid .columns-3:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .grid .columns-4:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  .grid .columns-5:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .grid .columns-6:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .grid .columns-7:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  .grid .columns-8:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .grid .columns-9:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+  }
+  .grid .columns-10:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+  }
+  .grid .columns-11:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-12 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .grid .columns-12:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+  }
+  .grid .columns-1:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  .grid .columns-2:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  .grid .columns-3:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .grid .columns-4:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  .grid .columns-5:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .grid .columns-6:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .grid .columns-7:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  .grid .columns-8:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .grid .columns-9:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+  }
+  .grid .columns-10:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+  }
+  .grid .columns-11:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-12 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .grid .columns-12:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+  }
+  .grid .columns-1:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  .grid .columns-2:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  .grid .columns-3:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .grid .columns-4:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  .grid .columns-5:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .grid .columns-6:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .grid .columns-7:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  .grid .columns-8:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .grid .columns-9:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+  }
+  .grid .columns-10:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+  }
+  .grid .columns-11:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-12 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .grid .columns-12:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%;
+  }
+  .grid .columns-1:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  .grid .columns-2:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  .grid .columns-3:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .grid .columns-4:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  .grid .columns-5:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+  }
+  .grid .columns-6:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+  }
+  .grid .columns-7:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+  }
+  .grid .columns-8:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+  }
+  .grid .columns-9:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+  }
+  .grid .columns-10:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%;
+  }
+  .grid .columns-11:last-child {
+    margin-right: 0;
+  }
+  .grid .columns-12 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .grid .columns-12:last-child {
+    margin-right: 0;
+  }
+  .grid .shift-1 {
+    margin-left: 8.5298%;
+  }
+  .grid .shift-2 {
+    margin-left: 17.05961%;
+  }
+  .grid .shift-3 {
+    margin-left: 25.58941%;
+  }
+  .grid .shift-4 {
+    margin-left: 34.11922%;
+  }
+  .grid .shift-5 {
+    margin-left: 42.64902%;
+  }
+  .grid .shift-6 {
+    margin-left: 51.17883%;
+  }
+  .grid .shift-7 {
+    margin-left: 59.70863%;
+  }
+  .grid .shift-8 {
+    margin-left: 68.23843%;
+  }
+  .grid .shift-9 {
+    margin-left: 76.76824%;
+  }
+  .grid .shift-10 {
+    margin-left: 85.29804%;
+  }
+  .grid .shift-11 {
+    margin-left: 93.82785%;
+  }
+  .grid .shift-12 {
+    margin-left: 102.35765%;
+  }
+  .grid .shift-1 {
+    margin-left: 8.5298%;
+  }
+  .grid .shift-2 {
+    margin-left: 17.05961%;
+  }
+  .grid .shift-3 {
+    margin-left: 25.58941%;
+  }
+  .grid .shift-4 {
+    margin-left: 34.11922%;
+  }
+  .grid .shift-5 {
+    margin-left: 42.64902%;
+  }
+  .grid .shift-6 {
+    margin-left: 51.17883%;
+  }
+  .grid .shift-7 {
+    margin-left: 59.70863%;
+  }
+  .grid .shift-8 {
+    margin-left: 68.23843%;
+  }
+  .grid .shift-9 {
+    margin-left: 76.76824%;
+  }
+  .grid .shift-10 {
+    margin-left: 85.29804%;
+  }
+  .grid .shift-11 {
+    margin-left: 93.82785%;
+  }
+  .grid .shift-12 {
+    margin-left: 102.35765%;
+  }
+  .grid .shift-1 {
+    margin-left: 8.5298%;
+  }
+  .grid .shift-2 {
+    margin-left: 17.05961%;
+  }
+  .grid .shift-3 {
+    margin-left: 25.58941%;
+  }
+  .grid .shift-4 {
+    margin-left: 34.11922%;
+  }
+  .grid .shift-5 {
+    margin-left: 42.64902%;
+  }
+  .grid .shift-6 {
+    margin-left: 51.17883%;
+  }
+  .grid .shift-7 {
+    margin-left: 59.70863%;
+  }
+  .grid .shift-8 {
+    margin-left: 68.23843%;
+  }
+  .grid .shift-9 {
+    margin-left: 76.76824%;
+  }
+  .grid .shift-10 {
+    margin-left: 85.29804%;
+  }
+  .grid .shift-11 {
+    margin-left: 93.82785%;
+  }
+  .grid .shift-12 {
+    margin-left: 102.35765%;
+  }
+  .grid .shift-1 {
+    margin-left: 8.5298%;
+  }
+  .grid .shift-2 {
+    margin-left: 17.05961%;
+  }
+  .grid .shift-3 {
+    margin-left: 25.58941%;
+  }
+  .grid .shift-4 {
+    margin-left: 34.11922%;
+  }
+  .grid .shift-5 {
+    margin-left: 42.64902%;
+  }
+  .grid .shift-6 {
+    margin-left: 51.17883%;
+  }
+  .grid .shift-7 {
+    margin-left: 59.70863%;
+  }
+  .grid .shift-8 {
+    margin-left: 68.23843%;
+  }
+  .grid .shift-9 {
+    margin-left: 76.76824%;
+  }
+  .grid .shift-10 {
+    margin-left: 85.29804%;
+  }
+  .grid .shift-11 {
+    margin-left: 93.82785%;
+  }
+  .grid .shift-12 {
+    margin-left: 102.35765%;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.column-example {
+  background-color: #88C05A;
+  text-align: center;
+  color: #292e38;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  background-color: #CFD3D8;
+  padding: 20px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.grid-container h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: -80px;
+}
+
+.logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 60px;
+  font-color: #4a4a4a;
+}
+
+.tag {
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
