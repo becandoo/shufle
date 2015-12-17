@@ -1,9 +1,10 @@
-# [Shufle](http://becandoo.github.io/shufle) - A Super Simple Susy Grid
+# [Shufle](http://becandoo.github.io/shufle)
+## A simple, lightweight grid, built with Neat.
 
-> Why another grid? Not everyone knows SASS and we get it. I didn't know about it until about a year ago, when I crawled out from under a rock.
+> Why another grid? Not everyone knows SASS and we get it.
+>This is for people who want to harness the power of Bourbon's Neat, without having to know sass/scss.
 
-
-Shufle is a simple, semantic grid, based on Susy.
+### Eventually, we will add additional (optional) HTML elements to create an awesome, framework, harnessing the power of Bourbon.
 
 
 1. Drop the 'grid.css' file into your CSS/Stylesheets folder.
